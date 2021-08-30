@@ -7,9 +7,9 @@ function DropdownMenu(props) {
     const {isDropdownShown} = useContext(DropdownContext);
 
     return (
-        <ul style={{display: isDropdownShown ? 'block' : 'none'}}>
-            {props.children}
-        </ul>
+        <React.Fragment>
+            {isDropdownShown && <ul>{props.children}</ul>}
+        </React.Fragment>
     );
 }
 
