@@ -1,0 +1,26 @@
+.dropdown button {
+    background: #696e78;
+    color: white;
+    border-radius: 4px;
+    padding: 6px 10px 8px 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown button:after {
+    margin-left: 5px;
+    content: "▾";
+}
+
+.dropdown:hover button:before {
+    border: 3px solid lightgray;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: -3px;
+    left: -3px;
+    border-radius: 8px;
+}
