@@ -10,6 +10,7 @@ function DropdownButton({value}) {
         document.addEventListener('click', () => {
             setIsDropdownShown(false);
         })
+        // eslint-disable-next-line
     }, []);
 
     const handleClick = e => {
