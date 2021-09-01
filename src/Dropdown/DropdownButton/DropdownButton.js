@@ -7,10 +7,9 @@ function DropdownButton({value}) {
     const {isDropdownShown, setIsDropdownShown} = useContext(DropdownContext);
 
     useEffect(() => {
-        document.addEventListener('click', () => {
-            setIsDropdownShown(false);
-        })
-        // eslint-disable-next-line
+        const handler = () => setIsDropdownShown(false);
+        document.addEventListener('click', handler);
+        return () => document.removeEventListener('click', handler)// eslint-disable-next-line
     }, []);
 
     const handleClick = e => {

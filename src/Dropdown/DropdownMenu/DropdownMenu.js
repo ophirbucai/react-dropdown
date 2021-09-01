@@ -4,11 +4,11 @@ import './DropdownMenu.css';
 
 function DropdownMenu(props) {
 
-    const {isDropdownShown} = useContext(DropdownContext);
+    const {isDropdownShown, domNode} = useContext(DropdownContext);
 
     return (
         <React.Fragment>
-            {isDropdownShown && <ul>{props.children}</ul>}
+            {isDropdownShown && <ul ref={domNode}>{props.children}</ul>}
         </React.Fragment>
     );
 }
