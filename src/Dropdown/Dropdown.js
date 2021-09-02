@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {DropdownContext} from "./dropdown-context";
-import useClickOutside from '../hooks/useClickOutside';
+import {useClickOutside} from '../hooks';
 
 function Dropdown(props) {
     const [isDropdownShown, setIsDropdownShown] = useState(false);
