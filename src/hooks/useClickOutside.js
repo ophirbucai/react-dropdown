@@ -1,6 +1,6 @@
 import {useRef, useEffect} from 'react';
 
-export default function useClickOutside(handler) {
+export function useClickOutside(handler) {
     const domNode = useRef();
 
     useEffect(() => {
@@ -9,8 +9,8 @@ export default function useClickOutside(handler) {
                 handler();
             }
         }
-        document.addEventListener('click', maybeHandler);
-        return () => document.removeEventListener('click', maybeHandler)// eslint-disable-next-line
+        document.addEventListener('mousedown', maybeHandler);
+        return () => document.removeEventListener('mousedown', maybeHandler)// eslint-disable-next-line
     }, []);
 
     return domNode;

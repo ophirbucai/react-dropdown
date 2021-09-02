@@ -1,9 +1,6 @@
 import React from "react";
 import './App.css';
-import Dropdown from './Dropdown/Dropdown';
-import DropdownButton from "./Dropdown/DropdownButton/DropdownButton";
-import DropdownMenu from "./Dropdown/DropdownMenu/DropdownMenu";
-import DropdownItem from "./Dropdown/DropdownMenu/DropdownItem/DropdownItem";
+import {Dropdown, DropdownButton, DropdownMenu, DropdownItem} from './Dropdown';
 
 function App() {
 
@@ -15,6 +12,7 @@ function App() {
                 <DropdownItem value="Action" link="/action" />
                 <DropdownItem value="Another action" link="/another-action" />
                 <DropdownItem value="Something else" link="/something" />
+                <DropdownItem value="Stay on this page" on="div" />
             </DropdownMenu>
         </Dropdown>
     </div>
