@@ -1,11 +1,15 @@
 import React from "react";
 import './App.css';
+<<<<<<< HEAD
 import {
     Dropdown,
     DropdownButton,
     DropdownMenu,
     DropdownItem
 } from './Dropdown';
+=======
+import {Dropdown, DropdownButton, DropdownMenu, DropdownItem} from './Dropdown';
+>>>>>>> 3735dd4041456062496a101ae0ea17c29373fffa
 
 function App() {
 
